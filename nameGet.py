@@ -25,3 +25,7 @@ def getLast():
         last_names = [name.strip() for name in last_names]
     randomNum = random.randint(1, 4944)
     return last_names[randomNum]
+
+def randomName():
+    name = getLast() + getFirst()
+    return name
