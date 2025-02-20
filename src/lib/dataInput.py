@@ -46,6 +46,7 @@ def dataInput(driver):
         if button.text == "Weiter":
             button.click()
     
+    driver.quit()
             
 
 
