@@ -1,5 +1,7 @@
 import os
 import random
+
+#assigning filepath for name.txt files
 def getPathFirst():
     path = os.path.dirname(__file__)
     pathname = ("\cont\\first-names.txt")
@@ -12,6 +14,7 @@ def getPathLast():
     contdir = path + pathname
     return contdir
 
+#using name.txt files to generate random name
 def getFirst():
     with open(getPathFirst()) as file:
         first_names = file.readlines()
@@ -26,6 +29,7 @@ def getLast():
     randomNum = random.randint(1, 4944)
     return last_names[randomNum]
 
+#combines both names 
 def randomName():
     name = getLast() + getFirst()
     return name
