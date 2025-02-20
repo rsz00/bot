@@ -31,5 +31,12 @@ def getLast():
 
 #combines both names 
 def randomName():
-    name = getLast() + getFirst()
+    name = []
+    name.append(getFirst())
+    name.append(getLast())
+    return name
+
+def genUsername(first, last):
+    number = random.randint(1,99)
+    name = first + "_" + last + "_" + number
     return name
