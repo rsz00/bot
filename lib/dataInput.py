@@ -5,6 +5,7 @@ from lib import emailGrabber
 from lib import passGen
 from lib import nameGet
 from lib import credential_writer
+from lib import randomMonth
 from selenium.common.exceptions import *
 import time
 import random
