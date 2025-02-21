@@ -37,6 +37,6 @@ def randomName():
     return name
 
 def genUsername(first, last):
-    number = random.randint(1,99)
+    number = str(random.randint(1,99))
     name = first + "_" + last + "_" + number
     return name
