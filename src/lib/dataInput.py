@@ -3,9 +3,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from emailGrabber import emailGrabber
 from passGen import passGen
-from nameGet import randomName 
+from nameGet import randomName
+from nameGet import genUsername
 from selenium.common.exceptions import *
 import time
+
 
 def dataInput(driver):
     adress = "https://www.instagram.com/accounts/emailsignup/"
