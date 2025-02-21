@@ -47,12 +47,5 @@ def dataInput(driver):
         print(button.text)
         if button.text == "Weiter":
             button.click()
-    
-    driver.quit()
             
-
-
-
-
-dataInput(webdriver.Firefox())
 
