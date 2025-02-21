@@ -37,9 +37,6 @@ def dataInput(driver):
     #input für username
     userName = nameGet.genUsername(name[0], name[1])
     driver.find_element(By.NAME, "username").send_keys(userName)
-    
-    #saves bot login
-    credential_writer.write_credentials(userName, password)
 
     #weiter click
     driver.implicitly_wait(5)
@@ -70,17 +67,28 @@ def dataInput(driver):
     for button in buttons:
         if button.text == "Weiter":
             button.click()
+    time.sleep(2)
     
     #confirm email
     #click "Code erneute senden" to get the email
-    body = driver.find_element(By.TAG_NAME, "body")
-    body.send_keys(Keys.TAB)
-    body.send_keys(Keys.ENTER)
+    buttons = driver.find_elements(By.TAG_NAME, "div")
+
     time.sleep(1)
+    emailCode = None
+    while emailCode == None:
+        emailCode = emailGrabber.emailConfirm(browser)
+        emailConfirm = driver.find_element(By.NAME, "email_confirmation_code")
+        if emailCode == None:
+            for button in buttons:
+                    if button.text == "Code erneut senden.":
+                        button.click()
+            time.sleep(1)
+            if emailCode != None:
+                break
     emailCode = emailGrabber.emailConfirm(browser)
-    emailCodeInput = driver.find_element(By.NAME, "email_confirmation_code")
-    emailCodeInput.send_keys(emailCode)
+    emailConfirm.send_keys(emailCode)
     time.sleep(1)
+
     buttons = driver.find_elements(By.TAG_NAME, "div")
     for button in buttons:
         if button.text == "Weiter":
@@ -88,6 +96,9 @@ def dataInput(driver):
                 button.click()
             except ElementClickInterceptedException:
                 pass
+    #saves bot login
+    credential_writer.write_credentials(userName, password)
+    
     time.sleep(1)
     browser.quit()
     driver.quit()

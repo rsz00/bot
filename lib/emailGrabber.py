@@ -13,7 +13,7 @@ def emailGrabber(driver):
 
 #gets confirmation code from email
 def emailConfirm(driver):
-    driver.implicitly_wait(20)
+    driver.implicitly_wait(120)
     emailText = driver.find_element(By.XPATH, "/html/body/div[3]/div/div/div/div[1]/div[2]/div/div/div/div[2]/div[3]/a[2]/div/div[4]/b").text
     emailCode = re.findall(r"\d+", emailText)
     return emailCode   
