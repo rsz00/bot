@@ -1,5 +1,6 @@
+import random
 def randomMonthGer():
-    randomMonth = {
+    randomMonthLogin = {
         1: "Januar",
         2: "Februar",
         3: "März",
@@ -13,8 +14,10 @@ def randomMonthGer():
         11: "November",
         12: "Dezember"
         }
+    return randomMonthLogin[random.randint(1,12)]
+
 def randomMonthEng():
-    randomMonth = {
+    randomMonthLogin = {
         1: "January",  
         2: "February",
         3: "March",
@@ -28,3 +31,4 @@ def randomMonthEng():
         11: "November",
         12: "December"
         }
+    return randomMonthLogin[random.randint(1,12)]
