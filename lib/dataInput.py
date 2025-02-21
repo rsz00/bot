@@ -88,5 +88,8 @@ def dataInput(driver):
                 button.click()
             except ElementClickInterceptedException:
                 pass
+    time.sleep(1)
+    browser.quit()
+    driver.quit()
 
 
