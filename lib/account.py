@@ -9,4 +9,5 @@ def generateAccountArray(names,psswords):
     ret = []
     while i < len(names):
         ret.append(Account(names[i],psswords[i]))
+        i+=1
     return ret

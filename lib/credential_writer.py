@@ -14,5 +14,4 @@ def receive_credentials():
             splitted_string = line.split(",")
             names.append(splitted_string[0].strip())
             passwords.append(splitted_string[1].strip())
-        return account.generateAccountArray(names,passwords)
-
+    return account.generateAccountArray(names,passwords)
