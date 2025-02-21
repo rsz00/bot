@@ -4,10 +4,10 @@ CREATION Client
     -email retrieval (kept open for confirmation mail)
    
     -name and password generation
+
+-------Done-------
    
     -form filling on website
-
------Done------
    
 3. permanent account login storage
 
