@@ -6,28 +6,23 @@ from selenium.common.exceptions import *
 import time
 import os
 import random
+import credentials_index
 
-def get_credentials_from_file(filepath):
-    with open(filepath,"r") as file:
-        return file.readline().strip()
-
-def formFilling(driver):
+def formFilling(driver, userName, password):
     adress = "https://www.instagram.com/"
     driver.get(adress)
     driver.implicitly_wait(5)
+
+    # handle cookies
     cookie_buttons = driver.find_elements(By.TAG_NAME,"button")
     for button in cookie_buttons:
         if button.text == "Optionale Cookies ablehnen":
             button.click()
     driver.implicitly_wait(7)
 
-    #splitting string for data input
-    credentials = get_credentials_from_file(os.path.dirname(__file__)+"\cont\\credentials.txt")
-    userName, password = credentials.split(",",1)
-
     print(f"using credentials: {userName},{password}")
 
-    #input username
+    # input username
     min_delay = 0.1
     max_delay = 0.3
 
@@ -36,12 +31,12 @@ def formFilling(driver):
         usernameField.send_keys(character)
         time.sleep(random.uniform(min_delay, max_delay))
         
-    #input password
+    # input password
     passwordField = driver.find_element(By.NAME, "password")
     for character in password:
         passwordField.send_keys(character)
         time.sleep(random.uniform(min_delay, max_delay))
-    #login
+    # login
     driver.implicitly_wait(5)
     buttons = driver.find_elements(By.TAG_NAME, "button")
     time.sleep(1)
@@ -49,5 +44,27 @@ def formFilling(driver):
         if button.text == "Anmelden":
             button.click()
     
-formFilling(webdriver.Firefox())
+if __name__ == "__main__":
+    credentials_file = os.path.join(os.path.dirname(__file__), "cont", "credentials.txt")
+    last_used_file = os.path.join(os.path.dirname(__file__), "cont", "last_used.txt")
+
+    # get all credentials
+    credentials = credentials_index.get_credentials(credentials_file)
+    if not credentials:
+        print("No credentials found!")
+        exit()
+    # get the next account index
+    next_index = credentials_index.get_next_account_index(last_used_file, len(credentials))
+
+    # split credentials into username and password
+    userName, password = credentials[next_index].split(",", 1)
+
+    # update the last used index
+    credentials_index.update_last_used_index(last_used_file, next_index)
+
+    driver = webdriver.Firefox()
+
+    formFilling(driver, userName, password)
+
+
 
