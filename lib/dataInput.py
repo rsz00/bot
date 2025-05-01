@@ -47,16 +47,16 @@ def dataInput(driver):
             button.click()
 
     #enter Birthdate
-    month = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div/section/main/div/div/div[1]/div[1]/div/div[4]/div/div/span/span[1]/select")
+    month = driver.find_element(By.CSS_SELECTOR, 'select._aau-._ap32[title="Monat:"]')
     month.click()
     randomMonthLogin = randomMonth.randomMonthGer()
     month.send_keys(randomMonthLogin)
 
-    day = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div/section/main/div/div/div[1]/div[1]/div/div[4]/div/div/span/span[2]/select")
+    day = driver.find_element(By.CSS_SELECTOR, 'select._aau-._ap32[title="Tag:"]')
     day.click()
     day.send_keys(random.randint(1,28))
 
-    year = driver.find_element(By.XPATH, "/html/body/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div/section/main/div/div/div[1]/div[1]/div/div[4]/div/div/span/span[3]/select")
+    year = driver.find_element(By.CSS_SELECTOR, 'select._aau-._ap32[title="Jahr:"]')
     year.click()
     year.send_keys(random.randint(1980,2004))
 
