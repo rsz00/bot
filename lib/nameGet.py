@@ -18,7 +18,7 @@ def getPathLast():
 def getFirst():
     with open(getPathFirst()) as file:
         first_names = file.readlines()
-        first_names = [name.strip() for name in first_names]
+        first_names = [name.strip("-") for name in first_names]
     randomNum = random.randint(1, 4944)
     return first_names[randomNum]
 

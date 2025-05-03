@@ -1,5 +1,5 @@
 import os
-import account
+from lib import account
 
 def write_credentials(username,password):
     with open(os.path.dirname(__file__)+"\cont\\credentials.txt","a") as file:

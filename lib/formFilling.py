@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-import credential_writer
+from lib import credential_writer
 from selenium.common.exceptions import *
 import time
 import os
