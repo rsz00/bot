@@ -3,7 +3,7 @@ from lib import account
 
 def write_credentials(username,password):
     with open(os.path.dirname(__file__)+"\cont\\credentials.txt","a") as file:
-        file.write(username + "," + password + "\n")
+        file.write(f"{username},{password}\n")
 
 def receive_credentials():
     with open(os.path.dirname(__file__)+"\cont\\credentials.txt","r") as file:

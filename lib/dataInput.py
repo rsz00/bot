@@ -85,7 +85,6 @@ def dataInput(driver):
             time.sleep(1)
             if emailCode != None:
                 break
-    emailCode = emailGrabber.emailConfirm(browser)
     emailConfirm.send_keys(emailCode)
     time.sleep(1)
 

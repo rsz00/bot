@@ -285,11 +285,11 @@ Anitra
 Anjanette
 Anjela
 Ann
-Ann-Marie
+AnnMarie
 Anna
-Anna-Diana
-Anna-Diane
-Anna-Maria
+AnnaDiana
+AnnaDiane
+AnnaMaria
 Annabal
 Annabel
 Annabela
@@ -304,8 +304,8 @@ Annalise
 Annamaria
 Annamarie
 Anne
-Anne-Corinne
-Anne-Marie
+AnneCorinne
+AnneMarie
 Annecorinne
 Anneliese
 Annelise
@@ -475,7 +475,7 @@ Bamby
 Barb
 Barbabra
 Barbara
-Barbara-Anne
+BarbaraAnne
 Barbaraanne
 Barbe
 Barbee
@@ -574,7 +574,7 @@ Betsey
 Betsy
 Betta
 Bette
-Bette-Ann
+BetteAnn
 Betteann
 Betteanne
 Betti
@@ -810,7 +810,7 @@ Carmita
 Carmon
 Caro
 Carol
-Carol-Jean
+CarolJean
 Carola
 Carolan
 Carolann
@@ -1362,7 +1362,7 @@ Dian
 Diana
 Diandra
 Diane
-Diane-Marie
+DianeMarie
 Dianemarie
 Diann
 Dianna
@@ -2145,7 +2145,7 @@ Heidie
 Helaina
 Helaine
 Helen
-Helen-Elizabeth
+HelenElizabeth
 Helena
 Helene
 Helenka
@@ -2190,7 +2190,7 @@ Hinda
 Holli
 Hollie
 Holly
-Holly-Anne
+HollyAnne
 Hollyanne
 Honey
 Honor
@@ -2443,8 +2443,8 @@ Jilly
 Jinny
 Jo
 Jo Ann
-Jo-Ann
-Jo-Anne
+JoAnn
+JoAnne
 Joan
 Joana
 Joane
@@ -2601,7 +2601,7 @@ Kandy
 Kania
 Kanya
 Kara
-Kara-Lynn
+KaraLynn
 Karalee
 Karalynn
 Kare
@@ -3303,8 +3303,8 @@ Maribeth
 Marice
 Maridel
 Marie
-Marie-Ann
-Marie-Jeanne
+MarieAnn
+MarieJeanne
 Marieann
 Mariejeanne
 Mariel
@@ -4260,7 +4260,7 @@ Sandye
 Sapphira
 Sapphire
 Sara
-Sara-Ann
+SaraAnn
 Saraann
 Sarah
 Sarajane
@@ -4356,7 +4356,7 @@ Sheelah
 Sheena
 Sheeree
 Sheila
-Sheila-Kathryn
+SheilaKathryn
 Sheilah
 Shel
 Shela

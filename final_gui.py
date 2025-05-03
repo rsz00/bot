@@ -19,7 +19,7 @@ root.configure(background="grey")
 root.minsize(200,200)
 root.maxsize(800,800)
 
-#struzcturing label
+#structuring label
 tk.Label(root,text="Creation Amount: ").grid(row=0,column=0)
 e_num = tk.Entry(root)
 e_num.grid(row=0,column=2)
