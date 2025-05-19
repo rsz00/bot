@@ -74,7 +74,7 @@ def dataInput(driver):
     buttons = driver.find_elements(By.TAG_NAME, "div")
 
     time.sleep(1)
-    #loop to fix the issue of the email not getting send, doesn't seem to work qiuet yet
+    #loop to fix the issue of the email not getting send, doesn't seem to work quiet yet
     emailCode = None
     while emailCode == None:
         emailCode = emailGrabber.emailConfirm(browser)
